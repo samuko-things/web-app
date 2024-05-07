@@ -1,3 +1,9 @@
+npm notice 
+npm notice New major version of npm available! 9.5.1 -> 10.1.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.1.0
+npm notice Run npm install -g npm@10.1.0 to update!
+npm notice 
+
 # Collabo Web App
 **Goal**: Collabo Web App is to help create more awareness and visiblity for the Code Collabo Community, projects and programs within it.
 

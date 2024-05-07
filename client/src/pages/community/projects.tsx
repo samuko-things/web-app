@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { app } from '@/helpers/common';
 import Head from 'next/head';
-import { Project } from './../../model/project';
+import { Project } from '../../model/project';
 import ProjectCard from "../../components/ProjectCard";
 import styles from "../../styles/modules/project.module.css";
 

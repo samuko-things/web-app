@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: Code Collabo WebApp Backend API
+  contact: {}
+  version: '1.0.0'
+servers:
+  - url: http://localhost:8070/
+    variables: {}
+tags:
+  - name: Auth
+    description: 'for signing in and signing up'
+  - name: User
+    description: ''
+  - name: Project
+    description: ''
+paths:
+  /users/auth/signup:
+    post:
+      tags:
+        - Auth
+      summary: Sign up one User (with 'moderator' role)
+      description: Sign up one User (with 'moderator' role) by the super admin only
+      operationId: signUpOneUser
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignUpRequestShape'
+            example:
+              firstname: Sam
+              lastname: Ade
+              username: samade
+              email: samade@gmail.com
+              password: secret
+              img: img-url
+        required: true
+      responses:
+        '201':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+components:
+  schemas:
+    SignUpRequestShape:
+      title: SignUpRequestShape
+      required:
+        - firstname
+        - lastname
+        - username
+        - email
+        - password
+      type: object
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        img:
+          type: string
+      example:
+        firstname: Sam
+        lastname: Ade
+        username: samade
+        email: samade@gmail.com
+        password: secret
+        img: img-url
+  securitySchemes:
+    httpBearer:
+      type: http
+      scheme: bearer
